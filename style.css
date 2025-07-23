@@ -1,0 +1,649 @@
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.background-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.logo-text h1 {
+    color: #FFD700;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo-text p {
+    color: #FFD700;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a:hover {
+    background: rgba(255, 215, 0, 0.1);
+    color: #FFD700;
+    transform: translateY(-2px);
+}
+
+/* Main Content */
+main {
+    padding: 40px 0;
+}
+
+.hero {
+    padding: 60px 0;
+}
+
+.hero-content {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    color: #FFD700;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Simulator Card */
+.simulator-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.form-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    align-items: end;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #FFD700;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 15px;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #FFD700;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #000000;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(255, 215, 0, 0.4);
+    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Table Section */
+.table-section {
+    margin-top: 50px;
+}
+
+.table-section h3 {
+    color: #FFD700;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.table-responsive {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    overflow-x: auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+table th,
+table td {
+    padding: 15px 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+table th {
+    background: rgba(255, 215, 0, 0.1);
+    color: #FFD700;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+table td {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+table tr:hover {
+    background: rgba(255, 215, 0, 0.05);
+}
+
+.selected-row {
+    background: rgba(255, 215, 0, 0.15) !important;
+    border: 1px solid rgba(255, 215, 0, 0.5);
+}
+
+.highlight-rate {
+    color: #00FF88;
+    font-weight: bold;
+}
+
+.highlight-value {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    margin: 1% auto; /* Reduzido de 2% para 1% */
+    padding: 20px;
+    border: 2px solid #FFD700;
+    border-radius: 20px;
+    width: 70%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    color: #FFD700;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close:hover {
+    color: #FFA500;
+    transform: scale(1.1);
+}
+
+.modal-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+.modal-actions button {
+    flex: 1;
+    max-width: 200px;
+}
+
+#printContent {
+    background: #ffffff;
+    color: #000000;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 15px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    font-size: 0.7em; /* Reduz ainda mais o tamanho da fonte */
+}
+
+/* Print Content Styles */
+.print-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #FFD700;
+}
+
+.print-logo-image {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.print-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a1a2e;
+    margin-bottom: 5px;
+}
+
+.print-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.print-section-title h2 {
+    color: #1a1a2e;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.print-section {
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.print-highlight {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+}
+
+.print-highlight h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.print-info {
+    display: grid;
+    gap: 10px;
+}
+
+.print-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.print-label {
+    font-weight: 600;
+}
+
+.print-value {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.print-contact {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #FFD700;
+    text-align: center;
+    color: #666;
+}
+
+.print-contact p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+    margin-top: 80px;
+    padding: 40px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-section h4 {
+    color: #FFD700;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.footer-section p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .form-section {
+        grid-template-columns: 1fr;
+    }
+    
+    header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    .table-responsive {
+        padding: 15px;
+    }
+    
+    table th,
+    table td {
+        padding: 10px 8px;
+        font-size: 0.85rem;
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        padding: 20px;
+        width: 95%;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .simulator-card {
+        padding: 20px;
+    }
+    
+    .table-responsive {
+        padding: 10px;
+    }
+    
+    table {
+        font-size: 0.8rem;
+    }
+    
+    table th,
+    table td {
+        padding: 8px 5px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.simulator-card,
+.table-section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Loading states */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #FFD700;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.form-group select {
+    background-color: #2a2a4a !important; /* Cor de fundo escura */
+    color: #FFD700 !important; /* Cor do texto amarela */
+    border: 2px solid #FFD700 !important; /* Borda amarela */
+}
+
+.form-group select option {
+    background-color: #2a2a4a !important; /* Cor de fundo escura para as opções */
+    color: #FFD700 !important; /* Cor do texto amarela para as opções */
+}
+
+.form-group select:focus {
+    outline: none !important;
+    border-color: #FFA500 !important;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5) !important;
+}
+
+
+
+
+#printContent {
+    font-size: 0.8em; /* Reduz o tamanho da fonte para caber mais conteúdo */
+}
+
+.print-title {
+    font-size: 1.5rem; /* Ajusta o tamanho do título no print */
+}
+
+.print-subtitle {
+    font-size: 0.9rem; /* Ajusta o tamanho do subtítulo no print */
+}
+
+.print-section-title h2 {
+    font-size: 1.2rem; /* Ajusta o tamanho do título da seção no print */
+}
+
+.print-highlight h3 {
+    font-size: 1rem; /* Ajusta o tamanho do subtítulo de destaque no print */
+}
+
+.print-value {
+    font-size: 0.9rem; /* Ajusta o tamanho dos valores no print */
+}
+
+.print-contact p {
+    font-size: 0.75rem; /* Ajusta o tamanho do texto de contato no print */
+}
+
+
