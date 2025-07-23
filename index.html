@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorginho Cred</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-pattern"></div>
+    
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="jorginhocred_logo.png" alt="Jorginho Cred">
+                <div class="logo-text">
+                    <h1>Jorginho Cred</h1>
+                    <p>Realizando Sonhos</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="simulador" class="hero">
+            <div class="container">
+                <div class="hero-content">
+
+                </div>
+                
+                <div class="simulator-card">
+                    <div class="form-section">
+                        <div class="form-group">
+                            <label for="valorInicial">
+                                <i class="fas fa-dollar-sign"></i>
+                                Valor Inicial (R$)
+                            </label>
+                            <input type="number" id="valorInicial" placeholder="Digite o valor" min="0" step="0.01">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="parcelas">
+                                <i class="fas fa-calendar-alt"></i>
+                                Número de Parcelas
+                            </label>
+                            <select id="parcelas">
+                                <option value="">Selecione as parcelas</option>
+                                <option value="1">1x</option>
+                                <option value="2">2x</option>
+                                <option value="3">3x</option>
+                                <option value="4">4x</option>
+                                <option value="5">5x</option>
+                                <option value="6">6x</option>
+                                <option value="7">7x</option>
+                                <option value="8">8x</option>
+                                <option value="9">9x</option>
+                                <option value="10">10x</option>
+                                <option value="11">11x</option>
+                                <option value="12">12x</option>
+                                <option value="13">13x</option>
+                                <option value="14">14x</option>
+                                <option value="15">15x</option>
+                                <option value="16">16x</option>
+                                <option value="17">17x</option>
+                                <option value="18">18x</option>
+                                <option value="19">19x</option>
+                                <option value="20">20x</option>
+                                <option value="21">21x</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="bandeira">
+                                <i class="fas fa-credit-card"></i>
+                                Bandeira
+                            </label>
+                            <select id="bandeira">
+                                <option value="banese">Banese</option>
+                                <option value="visa-master">Visa/Master</option>
+                            </select>
+                        </div>
+                        
+                        <button id="gerarPrint" class="btn-primary">
+                            <i class="fas fa-print"></i>
+                            Gerar Print
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-section">
+                    <h3><i class="fas fa-table"></i> Tabela de Simulação</h3>
+                    <div class="table-responsive">
+                        <table id="tabelaSimulacao">
+                            <thead>
+                                <tr>
+                                    <th>Parcelas</th>
+                                    <th>Taxa (%)</th>
+                                    <th>Valor a Receber (R$)</th>
+                                    <th>Valor a Cobrar (R$)</th>
+                                    <th>Parcela Recebida (R$)</th>
+                                    <th>Parcela a Pagar (R$)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabelaCorpo">
+                                <!-- Dados da tabela serão preenchidos aqui pelo JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para Print -->
+    <div id="printModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="printContent">
+                <!-- Conteúdo do print será gerado aqui -->
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary" id="downloadPrint">
+                    <i class="fas fa-download"></i>
+                    Baixar Imagem
+                </button>
+                <button class="btn-secondary" id="closePrint">
+                    <i class="fas fa-times"></i>
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone"></i> (79) 9999-9999</p>
+                    <p><i class="fas fa-envelope"></i> jorginhocred@email.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <p><i class="fab fa-instagram"></i> @</p>
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Horário de Funcionamento</h4>
+                    <p>Segunda a Sexta: 8h às 18h</p>
+                    <p>Sábado: 8h às 12h</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jorginho Cred. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <canvas id="screenshotCanvas" style="display: none;"></canvas>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
